@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الصدقة الجارية المتكامل | أذكار وقرآن وأدعية</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .header-section {
+            max-width: 550px;
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #ffd700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .dedication {
+            font-size: 16px;
+            opacity: 0.95;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        /* حاوية الأقسام الرئيسية */
+        .main-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            padding: 25px 20px;
+            max-width: 550px;
+            width: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: right;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .main-section h2 {
+            font-size: 22px;
+            color: #ffd700;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+            padding-bottom: 10px;
+        }
+
+        /* بطاقة العنصر (ذكر، سورة، دعاء) */
+        .item-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border-right: 5px solid #ffd700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            /* تجعل البطاقة قابلة للضغط */
+            transition: transform 0.2s;
+        }
+
+        .item-card:active {
+            transform: scale(0.99);
+        }
+
+        .card-title {
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .card-text {
+            font-size: 16px;
+            line-height: 1.9;
+            text-align: center;
+            color: #f5f5f5;
+            margin-bottom: 15px;
+        }
+
+        /* تنسيق العدادات الرقمية */
+        .card-counter {
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            margin-top: 10px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+
+        .counter-label {
+            font-size: 12px;
+            color: #a0a0a0;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        /* أزرار التفاعل */
+        .btn-action {
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 12px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 15px;
+            transition: all 0.2s ease;
+            text-align: center;
+            outline: none;
+        }
+
+        .btn-tasbeeh {
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            color: #0f2027;
+        }
+
+        /* الزر النهائي لختم الصفحة */
+        .btn-final {
+            background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+            color: #fff;
+            font-size: 18px;
+            padding: 18px;
+            border-radius: 15px;
+            max-width: 550px;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            box-shadow: 0 6px 20px rgba(56, 239, 125, 0.3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-section">
+        <h1>اللهم نسألك الجنة لمن فارقونا بأجسادهم وبقيت ذكراهم خالدة بقلوبنا</h1>
+        <p class="dedication">صدقة جارية ونور ونفحات إيمانية مهداة إلى روح الفقيد الغالي <br><strong>(الحاج/ أحمد الملقب
+                الصغير)</strong><br>اللهم اغفر له وتب عليه واجعل منزلته في عليين.</p>
+    </div>
+
+    <div class="main-section">
+        <h2>الأذكار والتسابيح الإلكترونية 📿</h2>
+
+        <div class="item-card" style="border-right-color: #4facfe;" onclick="incCounter('count1')">
+            <div class="card-title"> الاستغفار</div>
+            <div class="card-text">"أستغفرُ اللَّهَ العظيمَ الذي لا إلهَ إلَّا هوَ الحيَّ القيُّومَ وأتوبُ إليهِ"</div>
+            <div class="counter-label">اضغط على الكرت بأكمله للتسبيح</div>
+            <div class="card-counter" id="count1">0</div>
+        </div>
+        <div class="item-card" style="border-right-color: #4facfe;" onclick="incCounter('count1')">
+            <div class="card-title"> الباقيات الصالحات</div>
+            <div class="card-text">"سبحان الله وبحمده ، سبحان الله العظيم"</div>
+            <div class="counter-label">اضغط على الكرت بأكمله للتسبيح</div>
+            <div class="card-counter" id="count1">0</div>
+        </div>
+        <div class="item-card" style="border-right-color: #4facfe;" onclick="incCounter('count1')">
+            <div class="card-title"> التكبير</div>
+            <div class="card-text">"الله أكبر"</div>
+            <div class="counter-label">اضغط على الكرت بأكمله للتسبيح</div>
+            <div class="card-counter" id="count1">0</div>
+        </div>
+        <div class="item-card" style="border-right-color: #4facfe;" onclick="incCounter('count1')">
+            <div class="card-title"> الحمد</div>
+            <div class="card-text">"الحمد لله"</div>
+            <div class="counter-label">اضغط على الكرت بأكمله للتسبيح</div>
+            <div class="card-counter" id="count1">0</div>
+        </div>
+        <div class="item-card" style="border-right-color: #4facfe;" onclick="incCounter('count2')">
+            <div class="card-title">الصلاة على النبي</div>
+            <div class="card-text">"اللَّهُمَّ صَلِّ وَسَلِّمْ وَبَارِكْ عَلَى نَبِيِّنَا مُحَمَّدٍ"</div>
+            <div class="counter-label">اضغط على الكرت بأكمله للتسبيح</div>
+            <div class="card-counter" id="count2">0</div>
+        </div>
+
+        <div class="item-card" style="border-right-color: #4facfe;" onclick="incCounter('count3')">
+            <div class="card-title">الحوقلة (كنز من كنوز الجنة)</div>
+            <div class="card-text">"لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ"</div>
+            <div class="counter-label">اضغط على الكرت بأكمله للتسبيح</div>
+            <div class="card-counter" id="count3">0</div>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>قراءة سور من القرآن الكريم 📖</h2>
+
+        <div class="item-card" style="border-right-color: #11998e;" onclick="incCounter('quran1')">
+            <div class="card-title" style="color:#38ef7d;">سورة الفاتحة</div>
+            <div class="card-text">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ (1) الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ (2)
+                الرَّحْمَنِ الرَّحِيمِ (3) مَالِكِ يَوْمِ الدِّينِ (4) إِيَّاكَ نَعْبُدُ وإِيَّاكَ نَسْتَعِينُ (5)
+                اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ (6) صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ
+                عَلَيْهِمْ وَلَا الضَّالِّينَ (7)</div>
+            <div class="counter-label">اضغط هنا عند الانتهاء من قراءة السورة لتسجيلها</div>
+            <div class="card-counter" id="quran1">0</div>
+        </div>
+
+        <div class="item-card" style="border-right-color: #11998e;" onclick="incCounter('quran2')">
+            <div class="card-title" style="color:#38ef7d;">آية الكرسي</div>
+            <div class="card-text">اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا
+                نَوْمٌ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا
+                بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ
+                إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ
+                الْعَلِيُّ الْعَظِيمُ</div>
+            <div class="counter-label">اضغط هنا عند الانتهاء من قراءة الآية لتسجيلها</div>
+            <div class="card-counter" id="quran2">0</div>
+        </div>
+
+        <div class="item-card" style="border-right-color: #11998e;" onclick="incCounter('quran3')">
+            <div class="card-title" style="color:#38ef7d;">سورة الإخلاص</div>
+            <div class="card-text">قُلْ هُوَ اللَّهُ أَحَدٌ (1) اللَّهُ الصَّمَدُ (2) لَمْ يَلِدْ وَلَمْ يُولَدْ (3)
+                وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ (4)</div>
+            <div class="counter-label">اضغط هنا عند الانتهاء من قراءة السورة لتسجيلها</div>
+            <div class="card-counter" id="quran3">0</div>
+        </div>
+
+        <div class="item-card" style="border-right-color: #11998e;" onclick="incCounter('quran4')">
+            <div class="card-title" style="color:#38ef7d;">سورة الفلق</div>
+            <div class="card-text">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (1) مِنْ شَرِّ مَا خَلَقَ (2) وَمِنْ شَرِّ غَاسِقٍ
+                إِذَا وَقَب (3) وَمِنْ شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ (4) وَمِنْ شَرِّ حَاسِدٍ إِذَا حَسَدَ (5)
+            </div>
+            <div class="counter-label">اضغط هنا عند الانتهاء من قراءة السورة لتسجيلها</div>
+            <div class="card-counter" id="quran4">0</div>
+        </div>
+
+        <div class="item-card" style="border-right-color: #11998e;" onclick="incCounter('quran5')">
+            <div class="card-title" style="color:#38ef7d;">سورة الناس</div>
+            <div class="card-text">قُلْ أَعُوذُ بِرَبِّ النَّاسِ (1) مَلِكِ النَّاسِ (2) إِلَهِ النَّاسِ (3) مِنْ شَرِّ
+                الْوَسْوَاسِ الْخَنَّاسِ (4) الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ (5) مِنَ الْجِنَّةِ وَالنَّاسِ (6)
+            </div>
+            <div class="counter-label">اضغط هنا عند الانتهاء من قراءة السورة لتسجيلها</div>
+            <div class="card-counter" id="quran5">0</div>
+        </div>
+    </div>
+
+    <div class="main-section">
+        <h2>أدعية للمتوفى 🤲</h2>
+
+        <div class="item-card" style="border-right-color: #f857a6;" onclick="incCounter('dua1')">
+            <div class="card-title" style="color:#ff5858;">دعاء المغفرة الشامل</div>
+            <div class="card-text">"اللهم اغفر له وارحمه وعافه واعف عنه، وأكرم نزله، ووسع مدخله، واغسله بالماء والثلج
+                والبرد، ونقه من الخطايا كما ينقى الثوب الأبيض من الدنس."</div>
+            <div class="counter-label">اضغط على الدعاء للتأمين عليه وكسب ثوابه</div>
+            <div class="card-counter" id="dua1">0</div>
+        </div>
+
+        <div class="item-card" style="border-right-color: #f857a6;" onclick="incCounter('dua2')">
+            <div class="card-title" style="color:#ff5858;">دعاء الثبات والنعيم</div>
+            <div class="card-text">"اللهم أبدله داراً خيراً من داره، وأهلاً خيراً من أهله، وأدخله الجنة من أوسع أبوابها،
+                وأعذه من عذاب القبر، ومن عذاب النار، وثبته عند السؤال."</div>
+            <div class="counter-label">اضغط على الدعاء للتأمين عليه وكسب ثوابه</div>
+            <div class="card-counter" id="dua2">0</div>
+        </div>
+
+        <div class="item-card" style="border-right-color: #f857a6;" onclick="incCounter('dua3')">
+            <div class="card-title" style="color:#ff5858;">دعاء القبر والفسحة</div>
+            <div class="card-text">"اللهم افسح له في قبره مد بصره، وافرش قبره من فراش الجنة، واجعله روضة من رياض الجنة
+                ولا تجعله حفرة من حفر النيران، واملأه بالرضا والنور."</div>
+            <div class="counter-label">اضغط على الدعاء للتأمين عليه وكسب ثوابه</div>
+            <div class="card-counter" id="dua3">0</div>
+        </div>
+    </div>
+
+    <button class="btn-action btn-final" onclick="showFinalMessage()">✨ أتممت القراءة والأذكار بنية الثواب ✨</button>
+
+    <script>
+        // دالة زيادة العداد لكل العناصر (أذكار، سور، أدعية)
+        function incCounter(id) {
+            let counter = document.getElementById(id);
+            let currentCount = parseInt(counter.innerText);
+            counter.innerText = currentCount + 1;
+
+            if (navigator.vibrate) {
+                navigator.vibrate(30); // اهتزاز تفاعلي هادئ جداً مع كل ضغطة
+            }
+        }
+
+        // دالة إظهار رسالة الشكر الختامية الكبرى
+        function showFinalMessage() {
+            alert("تقبل الله صالح أعمالكم وطاعاتكم، وضاعف أجوركم.. تم تسجيل قراءتكم وتسبيحاتكم كاملة بميزان حسنات الفقيد الغالي، غفر الله له وجعل قبره روضة من رياض الجنة. آمين.");
+        }
+    </script>
+</body>
+
+</html>
